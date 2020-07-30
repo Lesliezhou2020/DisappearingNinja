@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Disappearing Ninja</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .ninja {
+            background-image: url("ninja.png");
+            background-size: auto;
+            height: 273px;
+            width: 250px;
+            display: inline-block;
+        }
+        #restore {
+            height: 80px;
+            width: 200px;
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".ninja").click(function() {
+                $(this).fadeOut("slow")
+            })
+
+            $("#restore").click(function() {
+                $(".ninja").fadeIn()
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div class="ninja"></div>
+        <div class="ninja"></div>
+        <div class="ninja"></div>
+        <div class="ninja"></div>
+        <br>
+        <div class="ninja"></div>
+        <div class="ninja"></div>
+        <div class="ninja"></div>
+        <div class="ninja"></div>
+    </div>
+    <button id="restore"><H1>Restore</H1></button>
+</body>
+</html>
